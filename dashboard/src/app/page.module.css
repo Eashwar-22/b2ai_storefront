@@ -1,0 +1,228 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 320px 1fr 340px;
+  grid-template-rows: 64px 1fr;
+  height: 100vh;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.header {
+  grid-column: 1 / -1;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.glow {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-success);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-success);
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 40px;
+}
+
+.controls input {
+  flex: 1;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  outline: none;
+}
+
+.controls button {
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Sidebars */
+.sidebar {
+  border-right: 1px solid var(--border-color);
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.sidebarRight {
+  border-left: 1px solid var(--border-color);
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.sectionTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+/* Feed / Main Area */
+.feed {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contextCard {
+  background: rgba(37, 99, 235, 0.04);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.contextText {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contextText strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.logEntry {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: background 0.2s;
+}
+
+.logEntry:hover {
+  background: rgba(15, 23, 42, 0.02);
+  border-color: var(--border-color);
+}
+
+.nodeLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  padding-top: 4px;
+}
+
+.content {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Colors for specific roles */
+.seller_a .nodeLabel { color: var(--accent-primary); }
+.seller_b .nodeLabel { color: #8b5cf6; } /* Purple for Vapor */
+.buyer .nodeLabel { color: var(--text-primary); }
+.discovery .nodeLabel, .tools .nodeLabel { color: #eab308; }
+
+.roi_card {
+  grid-column: 1 / -1;
+  background: rgba(5, 150, 105, 0.05);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  display: block;
+  text-align: center;
+}
+
+/* Inventory Cards */
+.inventoryItem {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: rgba(15, 23, 42, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.itemSub {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+}
+
+.errorEntry {
+  border-color: var(--accent-risk);
+  background: rgba(225, 29, 72, 0.05);
+}
+.errorEntry .nodeLabel { color: var(--accent-risk); }
+
+.scenarioList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scenarioLink {
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  text-align: left;
+  color: var(--accent-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-family: inherit;
+}
+
+.scenarioLink:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}

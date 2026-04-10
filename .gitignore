@@ -1,0 +1,48 @@
+# environments
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.pytest_cache/
+
+# node / frontend
+node_modules/
+.next/
+out/
+build/
+.vercel
+*.log
+
+# local data
+qdrant_storage/
+data/
+
+# mac / system
+.DS_Store
+Thumbs.db
+.gemini/
+for_new_chat.md
+AI_ENGINEERING_MASTERCLASS.md
+architecture_notes.md
+challenges_overcome.md
+lessons_learned.md
+project_overview.md
+screenshot_path.txt
+[A[B
+# artifacts / workspace
+.gemini/
+antigravity/
+brain/
+logs/
+scratch/
+task.md
+implementation_plan.md
+walkthrough.md

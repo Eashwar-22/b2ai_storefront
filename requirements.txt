@@ -1,0 +1,14 @@
+fastmcp>=0.1.0
+qdrant-client>=1.8.0
+fastembed>=0.2.6
+mcp>=0.1.0
+langchain-core
+langchain-groq
+langchain-community
+langgraph
+langfuse
+supabase
+python-dotenv
+fastapi
+sse-starlette
+uvicorn
